@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discblox - Manage Roblox from Discord</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #495057;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        section {
+            padding: 2em;
+            background-color: #ecf0f1;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-section {
+            background-color: #3498db;
+            color: #fff;
+            padding: 2em;
+            text-align: center;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-section h2 {
+            margin-top: 0;
+            font-size: 2em;
+        }
+
+        .cta-section button {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            background-color: #e67e22;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .cta-section button:hover {
+            background-color: #d35400;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .subscription, .support-server {
+            background-color: #27ae60;
+            color: #fff;
+            padding: 2em;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .subscription ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .support-server a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.2em;
+            display: inline-block;
+            margin-top: 1em;
+            padding: 10px 20px;
+            background-color: #3498db;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .support-server a:hover {
+            background-color: #2980b9;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .feature {
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+        }
+
+        .feature i {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #3498db;
+        }
+
+        .admin-section {
+            display: none;
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        #adminButton {
+            background-color: #e74c3c;
+            color: #fff;
+            font-size: 1.5em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        #adminButton:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Discblox</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#golden">Golden Subscription</a>
+        <a href="#support">Support Server</a>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to Discblox!</h2>
+        <p>Connect your Roblox account to Discord and manage your groups seamlessly.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Discblox</h2>
+        <p>Discblox is a powerful Discord bot designed to simplify and enhance your Roblox group management experience directly from your Discord server.</p>
+    </section>
+
+    <section id="golden" class="subscription">
+        <h2>Golden Subscription Benefits</h2>
+        <ul>
+            <li>Priority access to new features</li>
+            <li>Enhanced group management tools</li>
+            <li>Exclusive support and assistance</li>
+            <li>And more!</li>
+        </ul>
+        <button onclick="location.href='https://www.roblox.com/game-pass/686139819/Bot-GOLD-Permanent-50-off'">Buy Gold</button>
+    </section>
+
+    <section id="support" class="support-server">
+        <h2>Join Our Discord Support Server</h2>
+        <p>Connect with our community and get instant support. Join now!</p>
+        <a href="https://dsc.gg/discblox" target="_blank">Join Support Server</a>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready to enhance your Discord experience with Discblox?</h2>
+        <button onclick="location.href='https://discord.com/api/oauth2/authorize?client_id=1194130578107285516&permissions=2147863552&scope=applications.commands%20bot'">Add Discblox</button>
+    </section>
+
+    <section class="features">
+        <div class="feature" id="feature1">
+            <i class="fas fa-users"></i>
+            <h3>Group Management</h3>
+            <p>Effortlessly manage your Roblox groups directly from Discord.</p>
+        </div>
+
+        <div class="feature" id="feature2">
+            <i class="fas fa-cogs"></i>
+            <h3>Customizable</h3>
+            <p>Tailor Discblox to fit your server's needs with customizable settings.</p>
+        </div>
+
+        <div class="feature" id="feature3">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Security</h3>
+            <p>Securely connect your Roblox account with Discord for enhanced protection.</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 Discblox. All rights reserved.
+    </footer>
+
+     <div id="adminSection" class="admin-section">
+        <h2>Admin Section</h2>
+        <p>Enter the admin password to access this section:</p>
+        <input type="password" id="adminPassword">
+        <button onclick="checkAdminPassword()">Submit</button>
+        <div id="adminContent"></div>
+    </div>
+
+    <button id="adminButton">Admin</button>
+
+    <script>
+        function checkAdminPassword() {
+            var password = document.getElementById('adminPassword').value;
+            if (password === 'yourAdminPassword') {
+                document.getElementById('adminContent').innerHTML = `
+                    <iframe src="http://vandyk5.com:5000/login" style="width: 100%; height: 500px; border: none;"></iframe>
+                `;
+            } else {
+                alert('Incorrect password. Please try again.');
+            }
+        }
+
+        document.getElementById('adminButton').addEventListener('click', function () {
+            document.getElementById('adminSection').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
